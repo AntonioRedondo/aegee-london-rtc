@@ -328,17 +328,25 @@ button {
 			opacity: 0;
 		}
 		
-		& .intro__logo {
+		& .intro__logo-container {
 			opacity: 1;
 			transform: scale3d(1, 1, 1);
 		}
 		
-		& .intro__text {
+		& .intro__subtext {
 			opacity: 1;
 		}
 		
 		& .intro__arrow-down-a {
 			opacity: 1;
+		}
+		
+		& .intro__bga {
+			transform: scale(1.1);
+		}
+		
+		& .intro__bgb {
+			transform: scale(1.2);
 		}
 	}
 }
