@@ -12,17 +12,10 @@
 }
 
 html {
-	overflow-y: scroll;
-	overflow-x: hidden;
-
-	/* http://stackoverflow.com/questions/14270084/overflow-xhidden-doesnt-prevent-content-from-overflowing-in-mobile-browsers */
-	/* position: fixed; */
-	
-	background: black;
+	background-color: black;
 	
 	color: white;
-	font-family: Source Sans Pro, sans-serif;
-	font-weight: 300;
+	font-family: Gill Sans MT Pro, sans-serif;
 }
 
 body {
@@ -34,21 +27,14 @@ p {
 }
 
 a {
-	color: $color6;
+	color: $color1;
 	font-weight: 900;
 	text-decoration: none;
+	transition: $time1;
 	
 	&:hover {
-		text-shadow: 0 0 0.5vw $color6;
+		text-shadow: 0 0 0.5vw $color1;
 	}
-}
-
-button {
-	padding: 0;
-	border: inherit;
-	cursor: pointer;
-	font-family: inherit;
-	text-align: center;
 }
 
 
@@ -57,12 +43,7 @@ button {
 
 .b {
 	font-weight: 800;
-}
-
-.dropcap::first-letter {
-	float: left;
-	margin: 0.15em 0.2em 0 0;
-	font-size: 3.6em;
+	text-decoration: underline;
 }
 
 .sup {
@@ -76,8 +57,45 @@ button {
 
 
 .text1 {
-	font-size: 1.2vw;
-	line-height: 1.5em;
+	font-size: 1.4vw;
+	line-height: 2.2vw;
+	
+	@media (max-width: $breakpointMobile) {
+		font-size: 4.5vw;
+		line-height: 7vw;
+	}
+	
+	@media (min-width: $breakpointBig) {
+		font-size: 1.38em;
+	}
+}
+
+.text3 {
+	color: $color3;
+	font-size: 2.2vw;
+	font-weight: 900;
+	line-height: 1.2vw;
+	
+	@media (max-width: $breakpointMobile) {
+		font-size: 6vw;
+	}
+	
+	@media (min-width: $breakpointBig) {
+		font-size: 1.6em;
+	}
+}
+
+
+
+
+
+.title1 {
+	margin: 2vw 0 3vw;
+	
+	font-size: 4vw;
+	line-height: 4vw;
+	color: $color3;
+	text-transform: uppercase;
 	
 	@media (max-width: $breakpointMobile) {
 		font-size: 4.5vw;
@@ -88,142 +106,20 @@ button {
 	}
 }
 
-.text2 {
-	padding: 0 6% 0 3.5%;
-	position: relative;
+
+.title2 {
+	margin: 2vw 0;
 	
-	color: $color4;
-	font-size: 1.8vw;
-	font-weight: 900;
-	line-height: 1.2em;
-	
-	text-shadow: 0 0 1.5vw $color4;
+	font-size: 2.5vw;
+	font-weight: bold;
+	line-height: initial;
 	
 	@media (max-width: $breakpointMobile) {
-		font-size: 6vw;
-		padding: 4vw 0 2vw;
+		font-size: 4.5vw;
 	}
 	
 	@media (min-width: $breakpointBig) {
-		font-size: 1.6em;
-	}
-	
-	&::before {
-		content: "‒";
-		
-		position: absolute;
-		top: 0;
-		left: 0;
-		
-		color: white;
-		
-		@media (max-width: $breakpointMobile) {
-			content: none;
-		}
-	}
-}
-
-.text3 {
-	color: $color4;
-	font-size: 1.7vw;
-	font-weight: 900;
-	line-height: 1.2em;
-	
-	@media (max-width: $breakpointMobile) {
-		font-size: 6vw;
-	}
-	
-	@media (min-width: $breakpointBig) {
-		font-size: 1.6em;
-	}
-}
-
-.text4 {
-	padding-bottom: 1vw;
-	
-	border-bottom: $color4 dashed 0.15vw;
-	
-	color: $color4b;
-	font-size: 3.3vw;
-	font-weight: 900;
-	line-height: 1.2em;
-	
-	text-shadow: 0 0 2.5vw $color4;
-	
-	@media (max-width: $breakpointMobile) {
-		margin-bottom: 5vw;
-		padding-bottom: 5vw;
-		font-size: 11vw;
-	}
-	
-	@media (min-width: $breakpointBig) {
-		font-size: 3em;
-	}
-}
-
-
-
-
-
-.title {
-	width: 40%;
-	margin: auto;
-	padding: 8% 0 4%;
-	
-	font-family: Roboto Slab, serif;
-	text-align: center;
-	
-	@media (max-width: $breakpointMedium) {
-		padding-top: 10%;
-	}
-	
-	@media (max-width: $breakpointMobile) {
-		width: auto;
-		margin: auto 10vw;
-		padding-top: 18vw;
-	}
-
-	&__main {
-		margin: 0;
-
-		font-weight: 700;
-		font-size: 4vw;
-		text-transform: uppercase;
-		line-height: 1em;
-		text-shadow: 0 0 90px white;
-		
-		cursor: default;
-		
-		@media (max-width: $breakpointMobile) {
-			margin: 0 0 5vw;
-			font-size: 10vw;
-		}
-		
-		@media (min-width: $breakpointBig) {
-			font-size: 5em;
-		}
-	}
-
-	&__explanation {
-		margin: 4.5% 0;
-		padding-top: 4.5%;
-		
-		border-top: 4px solid $color4;
-		
-		font-size: 1.2vw;
-		
-		@media (max-width: $breakpointMobile) {
-			font-size: 4.5vw;
-		}
-		
-		@media (min-width: $breakpointBig) {
-			font-size: 1.5em;
-		}
-		
-		&--the-board {
-			margin: 10% 0;
-			padding-top: 10%;
-		}
+		font-size: 1.38em;
 	}
 }
 
@@ -243,6 +139,12 @@ button {
 	left: 0;
 	right: 0;
 	
+	background:
+		radial-gradient(
+			ellipse farthest-corner at 50% 0,
+			$color9 10%,
+			$color10 60%
+		) center 0 / 400% 100% no-repeat;
 	box-shadow: 0 0 3vw black;
 	
 	@media (max-width: $breakpointMobile) {
@@ -289,30 +191,6 @@ button {
 	
 	@media (max-width: $breakpointMobile) {
 		flex-flow: column nowrap;
-	}
-}
-
-
-
-
-
-.bg1 {
-	background:
-		url('img/header.png') 0 $marginTop / 100% 600px no-repeat,
-		radial-gradient(
-			ellipse farthest-corner at 50% 0,
-			$color1 10%,
-			$color2 60%
-		) center $marginTop / 400% 100% no-repeat;
-	
-	@media (max-width: $breakpointMobile) {
-		background:
-			url('img/header.png') center top / 100% 600px no-repeat,
-			radial-gradient(
-				ellipse farthest-corner at 50% 0,
-				$color1 10%,
-				$color2 60%
-			) center top / 400% 100% no-repeat;
 	}
 }
 

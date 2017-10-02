@@ -12,7 +12,7 @@
 
 
 function setMargin(breakpointMobile) {
-	var margin = 300;
+	var margin = 250;
 	if (window.innerWidth < breakpointMobile)
 		margin = 80;
 	return margin;
@@ -59,7 +59,7 @@ function init() { // eslint-disable-line no-unused-vars
 	var gap = -margin;
 	
 	// d.st(function() { showTopBarEntries(); }, 2500);
-	setBodyHeight(d.calcClientHeightsSum("section.skrollr-deck") + margin*6);
+	setBodyHeight(d.calcClientHeightsSum("section.skrollr-deck") + margin*2);
 	// moveLine();
 	
 	
@@ -68,10 +68,16 @@ function init() { // eslint-disable-line no-unused-vars
 	// Sets up Skroller
 	var offsetFunctions = {
 		get d0() { return d.gi("intro").clientHeight + margin; },
-		get d0g() { return gap + this.d0; }
+		get d0g() { return gap + this.d0; },
+		get d1() { return d.gi("body").clientHeight + margin + this.d0; },
+		get d1g() { return gap + this.d1; },
+		get d2() { return d.gi("whats-included").clientHeight + margin + this.d1; },
+		get d2g() { return gap + this.d2; },
+		// get d3() { return d.gi("spread-the-word").clientHeight + margin + this.d2; },
+		// get d3g() { return gap + this.d3; }
 	};
 		
-	var skrollrInstance = skrollr.init({
+	skrollr.init({
 		smoothScrolling: false,
 		forceHeight: false,
 		constants: offsetFunctions,
@@ -92,31 +98,31 @@ function init() { // eslint-disable-line no-unused-vars
 	});
 	
 	// Sets up Skroller Menu
-	skrollr.menu.init(skrollrInstance, {
-		animate: true,
-		easing: "outCubic",
-		duration: 500,
-		handleLink: function(link) {
-			var extra = 1;
-			var linkText = link.href.split("#").pop();
-			
-			try { // To prevent SYNTAX_ERR exception
-				if (d.qs("#" + linkText) === null)
-					throw Error;
-			} catch(e) {
-				document.location.hash = "";
-				return 0;
-			}
-			
-			switch (linkText) {
-				case "intro":		return 0;
-				case "who-we-are":	return offsetFunctions.d0 + extra;
-				case "contact":		return offsetFunctions.d1 + extra;
-			}
-			
-			return 0;
-		}
-	});
+	// skrollr.menu.init(skrollrInstance, {
+	// 	animate: true,
+	// 	easing: "outCubic",
+	// 	duration: 500,
+	// 	handleLink: function(link) {
+	// 		var extra = 1;
+	// 		var linkText = link.href.split("#").pop();
+	//
+	// 		try { // To prevent SYNTAX_ERR exception
+	// 			if (d.qs("#" + linkText) === null)
+	// 				throw Error;
+	// 		} catch(e) {
+	// 			document.location.hash = "";
+	// 			return 0;
+	// 		}
+	//
+	// 		switch (linkText) {
+	// 			case "intro":		return 0;
+	// 			case "who-we-are":	return offsetFunctions.d0 + extra;
+	// 			case "contact":		return offsetFunctions.d1 + extra;
+	// 		}
+	//
+	// 		return 0;
+	// 	}
+	// });
 	
 	
 	
@@ -137,7 +143,7 @@ function init() { // eslint-disable-line no-unused-vars
 	
 	d.ae("resize", function() {
 		margin = setMargin(breakpointMobile);
-		setBodyHeight(d.calcClientHeightsSum("section.skrollr-deck") + margin*6);
+		setBodyHeight(d.calcClientHeightsSum("section.skrollr-deck") + margin*3);
 		// d.st(function() { moveLine(); }, 500);
 		d.gc("top-bar").classList.remove("top-bar--open");
 		d.gc("top-bar__three-bars-close").classList.remove("top-bar__three-bars-close--in");
@@ -145,7 +151,7 @@ function init() { // eslint-disable-line no-unused-vars
 	
 	d.ae("load", function() { // There are images that haven't height specified and it's only known once the image is loaded. They affect the height of the page.
 		margin = setMargin(breakpointMobile);
-		setBodyHeight(d.calcClientHeightsSum("section.skrollr-deck"));
+		setBodyHeight(d.calcClientHeightsSum("section.skrollr-deck") + margin*3);
 		// d.st(function() { moveLine(); }, 500);
 	});
 	
