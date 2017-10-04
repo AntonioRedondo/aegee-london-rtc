@@ -1,0 +1,111 @@
+.intro {
+	max-width: none;
+	height: 100vh;
+	
+	z-index: 10;
+	
+	position: relative;
+	
+	&__bga {
+		width: 100%;
+		height: 100%;
+		
+		position: absolute;
+		top: 0;
+		left: 0;
+			
+		object-fit: cover;
+		
+		transition: $time3 ease-out;
+	}
+	
+	&__bgb {
+		width: 100%;
+		height: 100%;
+		
+		position: absolute;
+		top: 0;
+		left: 0;
+			
+		background: url('img/bgb.png') center / cover;
+		
+		transition: $time3 ease-out;
+	}
+	
+	&__logo-container {
+		margin: auto;
+		
+		position: absolute;
+		top: 23vh;
+		left: 0;
+		right: 0;
+		
+		opacity: 0;
+		transform: scale3d(0.8, 0.8, 1);
+		
+		transition: transform 5s ease-out,
+				opacity 2s 0.5s ease-in;
+		
+		@media (max-width: $breakpointMobile) {
+			top: 45vw;
+		}
+	}
+	
+	&__logo {
+		width: 60vh;
+		margin: 0 auto;
+		
+		display: block;
+		
+		@media (max-width: $breakpointMobile) {
+			width: 75vw;
+		}
+	}
+	
+	&__subtext {
+		width: 38vh;
+		margin: 4vh auto;
+		
+		display: block;
+		
+		opacity: 0;
+		
+		transition: all 3s 2s;
+		
+		@media (max-width: $breakpointMobile) {
+			width: 65vw;
+			margin: 6vw auto 0;
+		}
+	}
+	
+	&__arrow-down-a {
+		width: 5%;
+		
+		position: absolute;
+		bottom: 4%;
+		left: 47.5%;
+		
+		filter: drop-shadow(0 0 1vw $color3);
+		
+		transition: opacity 3s 2s;
+		
+		opacity: 0;
+		
+		@media (max-width: $breakpointMobile) {
+			width: 12%;
+			left: 44%;
+		}
+	}
+	
+	&__arrow-down {
+		width: 100%;
+		height: @width;
+		
+		display: block;
+		
+		@media (max-width: $breakpointMobile) {
+			width: 12vw;
+			height: @width;
+		}
+	}
+}
