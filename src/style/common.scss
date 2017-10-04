@@ -56,39 +56,6 @@ a {
 
 
 
-.text1 {
-	font-size: 1.4vw;
-	line-height: 2.2vw;
-	
-	@media (max-width: $breakpointMobile) {
-		font-size: 4.5vw;
-		line-height: 7vw;
-	}
-	
-	@media (min-width: $breakpointBig) {
-		font-size: 1.38em;
-	}
-}
-
-.text3 {
-	color: $color3;
-	font-size: 2.2vw;
-	font-weight: 900;
-	line-height: 1.2vw;
-	
-	@media (max-width: $breakpointMobile) {
-		font-size: 6vw;
-	}
-	
-	@media (min-width: $breakpointBig) {
-		font-size: 1.6em;
-	}
-}
-
-
-
-
-
 .title1 {
 	margin: 2vw 0 3vw;
 	
@@ -98,11 +65,13 @@ a {
 	text-transform: uppercase;
 	
 	@media (max-width: $breakpointMobile) {
-		font-size: 4.5vw;
+		font-size: 10vw;
+		line-height: 10vw;
 	}
 	
 	@media (min-width: $breakpointBig) {
-		font-size: 1.38em;
+		font-size: 3em;
+		line-height: 1em;
 	}
 }
 
@@ -112,14 +81,52 @@ a {
 	
 	font-size: 2.5vw;
 	font-weight: bold;
-	line-height: initial;
+	line-height: 3vw;
 	
 	@media (max-width: $breakpointMobile) {
-		font-size: 4.5vw;
+		font-size: 8vw;
+		line-height: 9vw;
 	}
 	
 	@media (min-width: $breakpointBig) {
-		font-size: 1.38em;
+		font-size: 1.8em;
+		line-height: 1.2em;
+	}
+}
+
+.title3 {
+	color: $color3;
+	font-size: 2.2vw;
+	font-weight: 900;
+	line-height: 1.2vw;
+	
+	@media (max-width: $breakpointMobile) {
+		font-size: 7vw;
+		line-height: 9vw;
+	}
+	
+	@media (min-width: $breakpointBig) {
+		font-size: 1.7em;
+		line-height: 0.6em;
+	}
+}
+
+
+
+
+
+.text1 {
+	font-size: 1.4vw;
+	line-height: 2.1vw;
+	
+	@media (max-width: $breakpointMobile) {
+		font-size: 4.5vw;
+		line-height: 7vw;
+	}
+	
+	@media (min-width: $breakpointBig) {
+		font-size: 1.75em;
+		line-height: 1.6em;
 	}
 }
 
@@ -143,7 +150,7 @@ a {
 		radial-gradient(
 			ellipse farthest-corner at 50% 0,
 			$color9 10%,
-			$color10 60%
+			$color10 70%
 		) center 0 / 400% 100% no-repeat;
 	box-shadow: 0 0 3vw black;
 	
@@ -184,10 +191,6 @@ a {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	
-	&__w66 {
-		flex: 0 0 66%;
-	}
 	
 	@media (max-width: $breakpointMobile) {
 		flex-flow: column nowrap;

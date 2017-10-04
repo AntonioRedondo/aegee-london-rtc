@@ -10,10 +10,16 @@
 	
 	@media (max-width: $breakpointMobile) {
 		height: auto;
-		padding: 6vw 0;
+		padding: 8vw 0;
 		display: block;
 		text-align: center;
 		font-size: 4.5vw;
+	}
+	
+	@media (min-width: $breakpointBig) {
+		height: 100px;
+		box-shadow: 0 0 20px color(black a(55%));
+		font-size: 1.9em;
 	}
 	
 	&__copyright {
@@ -27,7 +33,7 @@
 		
 		@media (max-width: $breakpointMobile) {
 			display: block;
-			margin-left: 0;
+			margin: 0 8vw;
 		}
 	}
 	
@@ -42,7 +48,7 @@
 		
 		@media (max-width: $breakpointMobile) {
 			display: block;
-			margin-right: 0;
+			margin-top: 6vw;
 		}
 	}
 	
@@ -55,7 +61,15 @@
 		flex: auto;
 		
 		@media (max-width: $breakpointMobile) {
-			display: none;
+			width: 30vw;
+			height: @width;
+			margin: 4vw auto 0;
+			border-radius: 100%;
+		}
+		
+		@media (min-width: $breakpointBig) {
+			width: 100px;
+			height: @width;
 		}
 		
 		&:hover {

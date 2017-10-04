@@ -81,9 +81,9 @@ gulp.task("styleLint", () => {
 gulp.task("buildJs", () => {
 	return gulp.src(
 		[
-			"node_modules/webfontloader/webfontloader.js",
+			// "node_modules/webfontloader/webfontloader.js",
 			"node_modules/skrollr/dist/skrollr.min.js",
-			"node_modules/skrollr-menu/dist/skrollr.menu.min.js",
+			// "node_modules/skrollr-menu/dist/skrollr.menu.min.js",
 			`${SRC}/js/DOMTools.js`,
 			`${SRC}/js/aegeeLondon.js`,
 			`${SRC}/js/index.js`
@@ -106,7 +106,7 @@ gulp.task("buildCssAtoms", ["buildHtml"], () => {
 			outfile: "_atoms.scss",
 			acssConfig: {
 				breakPoints: {
-					bi: "@media (max-width: 2000px)",
+					bi: "@media (min-width: 2000px)",
 					me: "@media (max-width: 1470px)",
 					sm: "@media (max-width: 1100px)",
 					mo: "@media (max-width: 810px)"
