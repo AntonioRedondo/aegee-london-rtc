@@ -83,7 +83,7 @@ gulp.task("buildJs", () => {
 		[
 			// "node_modules/webfontloader/webfontloader.js",
 			"node_modules/skrollr/dist/skrollr.min.js",
-			// "node_modules/skrollr-menu/dist/skrollr.menu.min.js",
+			"node_modules/skrollr-menu/dist/skrollr.menu.min.js",
 			`${SRC}/js/DOMTools.js`,
 			`${SRC}/js/aegeeLondon.js`,
 			`${SRC}/js/index.js`

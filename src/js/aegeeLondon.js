@@ -37,52 +37,37 @@ function init() { // eslint-disable-line no-unused-vars
 		get d2g() { return gap + this.d2; }
 	};
 	
-	skrollr.init({
+	var skrollrInstance = skrollr.init({
 		smoothScrolling: false,
 		forceHeight: false,
 		constants: offsetFunctions,
-		mobileCheck: function() { return false; },
-		// keyframe: function(element, name, direction) {
-		// 	// console.log("keyframe:");
-		// 	// console.log(name);
-		// 	// console.log(name.slice(6));
-		// 	var extra = 0;
-		// 	if (direction === "up")
-		// 		--extra;
-		// 	switch (name.slice(6)) {
-		// 		case "0g": moveLine(1 + extra); break;
-		// 		case "1g": moveLine(2 + extra); break;
-		// 		case "2g": moveLine(3 + extra);
-		// 	}
-		// }
+		mobileCheck: function() { return false; }
 	});
 	
 	// Sets up Skroller Menu
-	// skrollr.menu.init(skrollrInstance, {
-	// 	animate: true,
-	// 	easing: "outCubic",
-	// 	duration: 500,
-	// 	handleLink: function(link) {
-	// 		var extra = 1;
-	// 		var linkText = link.href.split("#").pop();
-	//
-	// 		try { // To prevent SYNTAX_ERR exception
-	// 			if (d.qs("#" + linkText) === null)
-	// 				throw Error;
-	// 		} catch(e) {
-	// 			document.location.hash = "";
-	// 			return 0;
-	// 		}
-	//
-	// 		switch (linkText) {
-	// 			case "intro":		return 0;
-	// 			case "who-we-are":	return offsetFunctions.d0 + extra;
-	// 			case "contact":		return offsetFunctions.d1 + extra;
-	// 		}
-	//
-	// 		return 0;
-	// 	}
-	// });
+	skrollr.menu.init(skrollrInstance, {
+		animate: true,
+		easing: "outCubic",
+		duration: 800,
+		handleLink: function(link) {
+			var extra = 1;
+			var linkText = link.href.split("#").pop();
+			
+			try { // To prevent SYNTAX_ERR exception
+				if (d.qs("#" + linkText) === null)
+					throw Error;
+			} catch(e) {
+				document.location.hash = "";
+				return 0;
+			}
+			
+			switch (linkText) {
+				case "presentation":	return offsetFunctions.d0 + extra;
+			}
+			
+			return 0;
+		}
+	});
 	
 	d.ae("resize", function() {
 		margin = setMargin(breakpointMobile);
