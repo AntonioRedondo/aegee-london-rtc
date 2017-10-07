@@ -15,6 +15,6 @@ Check the website online on http://aegee-london.eu/brexit
 <img src="https://github.com/AntonioRedondo/Brexit-WhatNext/raw/master/readmeImages/1.png" width="900px" />
 <img src="https://github.com/AntonioRedondo/Brexit-WhatNext/raw/master/readmeImages/2.png" width="900px" />
 <img src="https://github.com/AntonioRedondo/Brexit-WhatNext/raw/master/readmeImages/3.png" width="900px" />
-<img src="https://github.com/AntonioRedondo/Brexit-WhatNext/raw/master/readmeImages/4.png" width="900px" />
-<img src="https://github.com/AntonioRedondo/Brexit-WhatNext/raw/master/readmeImages/5.png" width="900px" />
-<img src="https://github.com/AntonioRedondo/Brexit-WhatNext/raw/master/readmeImages/6.png" width="900px" />
+. <img src="https://github.com/AntonioRedondo/Brexit-WhatNext/raw/master/readmeImages/m4.png" width="300px" />
+<img src="https://github.com/AntonioRedondo/Brexit-WhatNext/raw/master/readmeImages/m5.png" width="300px" />
+<img src="https://github.com/AntonioRedondo/Brexit-WhatNext/raw/master/readmeImages/m6.png" width="300px" />
