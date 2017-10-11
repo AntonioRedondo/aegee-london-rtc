@@ -50,6 +50,7 @@ a {
 	vertical-align: super;
 	font-size: smaller;
 	line-height: normal;
+	text-transform: lowercase;
 }
 
 
@@ -220,11 +221,12 @@ a {
 			opacity: 1;
 		}
 		
-		& .intro__bga {
+		& .intro__bg-blue {
 			transform: scale(1.1);
 		}
 		
-		& .intro__bgb {
+		& .intro__bg-flag {
+			opacity: 1;
 			transform: scale(1.2);
 		}
 	}
