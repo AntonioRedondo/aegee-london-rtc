@@ -33,6 +33,8 @@
 	&__logo {
 		height: 8vw;
 		
+		transition: $time1;
+		
 		@media (max-width: $breakpointMobile) {
 			height: 30vw;
 			margin: 5vw auto;
@@ -40,6 +42,10 @@
 		
 		@media (min-width: $breakpointBig) {
 			height: 160px;
+		}
+		
+		&:hover {
+			transform: scale(1.1);
 		}
 	}
 }
