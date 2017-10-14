@@ -81,11 +81,11 @@ gulp.task("styleLint", () => {
 gulp.task("buildJs", () => {
 	return gulp.src(
 		[
-			// "node_modules/webfontloader/webfontloader.js",
+			"node_modules/fontfaceobserver/fontfaceobserver.js",
 			"node_modules/skrollr/dist/skrollr.min.js",
 			"node_modules/skrollr-menu/dist/skrollr.menu.min.js",
 			`${SRC}/js/DOMTools.js`,
-			`${SRC}/js/aegeeLondon.js`,
+			`${SRC}/js/brexit.js`,
 			`${SRC}/js/index.js`
 		])
 		.pipe(sourcemaps.init())

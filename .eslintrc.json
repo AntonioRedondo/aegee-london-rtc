@@ -17,8 +17,9 @@
 		"ga": true,
 		"d": true,
 		"skrollr": true,
-		"WebFont": true,
-		"YT": true
+		"YT": true,
+		"FontFaceObserver": true,
+		"Promise": true
 	},
 	"rules": {
 		"comma-dangle": [2, "only-multiline"],
