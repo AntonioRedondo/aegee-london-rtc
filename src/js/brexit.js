@@ -6,7 +6,9 @@ function setMargin(breakpointMobile) {
 
 
 
-function setBodyHeight(height) {
+function setBodyHeight() {
+	var breakpointMobile = 810;
+	var height = d.calcClientHeightsSum("section.skrollr-deck") + setMargin(breakpointMobile)*3;
 	document.body.style.height = height + "px";
 }
 
@@ -14,24 +16,15 @@ function setBodyHeight(height) {
 
 
 
-function setBodyHeightStandalone() { // eslint-disable-line no-unused-vars
-	var breakpointMobile = 810;
-	setBodyHeight(d.calcClientHeightsSum("section.skrollr-deck") + setMargin(breakpointMobile)*3);
-}
-
-
-
-
-
 function init() { // eslint-disable-line no-unused-vars
-	setBodyHeightStandalone();
+	setBodyHeight();
 	
 	d.ae("resize", function() {
-		setBodyHeightStandalone();
+		setBodyHeight();
 	});
 	
 	d.ae("load", function() {
-		setBodyHeightStandalone();
+		setBodyHeight();
 	});
 	
 	
