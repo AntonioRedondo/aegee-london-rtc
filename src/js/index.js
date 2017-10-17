@@ -3,7 +3,7 @@ d.notifyWhenLoaded(".intro__logo");
 d.notifyWhenLoaded(".intro__subtext");
 
 var fontA = new FontFaceObserver("Gill Sans MT Pro");
-var fontB = new FontFaceObserver("Gill Sans MT Pro", { weight: 400 });
+var fontB = new FontFaceObserver("Gill Sans MT Pro", { weight: "bold" });
 
 Promise.all([fontA.load(null, 5000), fontB.load(null, 5000)])
 	.then(function() {
