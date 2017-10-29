@@ -45,8 +45,9 @@
 		opacity: 0;
 		transform: scale3d(0.8, 0.8, 1);
 		
-		transition: transform 5s ease-out,
-				opacity 2s 0.5s ease-in;
+		transition:
+			transform 5s ease-out,
+			opacity 2s 0.5s ease-in;
 		
 		@media (max-width: $breakpointMobile) {
 			top: 45vw;

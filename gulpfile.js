@@ -35,12 +35,12 @@ const DEST = "docs";
 gulp.task("watch", ["lint", "build"], () => {
 	gulp.watch([`${SRC}/js/*.js`, ".eslintrc.json"], ["esLint", "buildJs"]);
 	gulp.watch([`${SRC}/**/*.htm`, ".htmlhintrc"], ["htmlHint"/* , "buildHtml" */]);
-	gulp.watch([`${SRC}/style/*.scss`, `${SRC}/**/*.htm`, `!${SRC}/style/_atoms.scss`, ".stylelintrc.json"], [/* "styleLint",  */"buildCss"]);
+	gulp.watch([`${SRC}/style/*.scss`, `${SRC}/**/*.htm`, `!${SRC}/style/_atoms.scss`, ".stylelintrc.json"], ["styleLint", "buildCss"]);
 	gulp.watch([`${SRC}/img/**`], ["copyAssets"]);
 });
-gulp.task("lint", ["esLint", "htmlHint"/* , "styleLint" */]);
+gulp.task("lint", ["esLint", "htmlHint", "styleLint"]);
 gulp.task("build", ["buildJs", /* "buildHtml",  */"buildCss", "copyAssets"]);
-gulp.task("default", ["watch"]);
+gulp.task("default", ["build"]);
 
 gulp.task("clean", () => del(DEST));
 
