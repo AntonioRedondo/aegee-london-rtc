@@ -1,0 +1,49 @@
+.locations {
+	z-index: 7;
+	
+	&__fb-iframe {
+		width: 500px;
+		height: 745px;
+		margin: 0 auto;
+		
+		display: block;
+		
+		border: none;
+		
+		@media (max-width: $breakpointMobile) {
+			width: 90%;
+			height: 800px;
+			margin: 8vw auto;
+		}
+	}
+	
+	&__map-overlay {
+		width: 100vw;
+		height: 35vw;
+		margin-top: -35vw;
+		
+		position: relative;
+		top: 40vw;
+	}
+	
+	&__map {
+		width: 100vw;
+		height: 35vw;
+		margin: 5vw 0 0;
+		
+		display: block;
+		
+		border: none;
+		
+		@media (max-width: $breakpointMobile) {
+			height: 100vw;
+			margin: 12vw 0 0;
+		}
+		
+		@media (min-width: $breakpointBig) {
+			width: $breakpointBig;
+			height: 700px;
+			margin: 100px 0 0;
+		}
+	}
+}

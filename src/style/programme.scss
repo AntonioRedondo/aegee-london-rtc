@@ -1,0 +1,52 @@
+.programme {
+	z-index: 8;
+	
+	&__program-container {
+		width: 70%;
+		margin: 1% 0 0 20%;
+		
+		display: flex;
+		flex-flow: wrap;
+		
+		@media (max-width: $breakpointMobile) {
+			width: 90%;
+			margin: 5% 0 0 10%;
+		}
+	}
+	
+	&__program {
+		width: 50%;
+		margin-top: 2vw;
+		
+		@media (max-width: $breakpointMobile) {
+			width: 100%;
+			margin-top: 8%;
+		}
+		
+		@media (min-width: $breakpointBig) {
+			margin-top: 35px;
+		}
+	}
+	
+	&__day {
+		color: $color3;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	
+	&__time {
+		width: 12%;
+		padding-right: 1%;
+		
+		display: inline-block;
+		float: left;
+		
+		font-weight: bold;
+		text-align: right;
+		
+		@media (max-width: $breakpointMobile) {
+			width: 10%;
+			padding-right: 3%;
+		}
+	}
+}

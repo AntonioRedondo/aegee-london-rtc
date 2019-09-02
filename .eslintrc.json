@@ -18,7 +18,7 @@
 		"d": true,
 		"skrollr": true,
 		"YT": true,
-		"FontFaceObserver": true,
+		"WebFont": true,
 		"Promise": true
 	},
 	"rules": {
