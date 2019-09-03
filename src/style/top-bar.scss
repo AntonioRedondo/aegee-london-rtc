@@ -36,7 +36,7 @@
 			background: $whiteE;
 		}
 		
-		& .top-bar__logo, & .top-bar__line {
+		& .top-bar__logo, & .top-bar__line, & .top-bar__left, & .top-bar__right {
 			opacity: 1;
 		}
 	}
@@ -218,6 +218,8 @@
 
 		position: absolute;
 		left: 0;
+
+		transition: $time2;
 		
 		@media (max-width: $breakpointMobile) {
 			display: none;
@@ -231,6 +233,10 @@
 
 		position: absolute;
 		right: 0;
+
+		opacity: 0;
+
+		transition: $time2;
 		
 		@media (max-width: $breakpointMobile) {
 			display: none;
