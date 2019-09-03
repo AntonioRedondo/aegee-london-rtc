@@ -210,6 +210,33 @@
 		}
 	}
 	
+	&__left {
+		width: 110px;
+		height: 35px;
+		margin-top: 10px;
+		margin-left: 10px;
+
+		position: absolute;
+		left: 0;
+		
+		@media (max-width: $breakpointMobile) {
+			display: none;
+		}
+	}
+	
+	&__right {
+		width: 100px;
+		height: 35px;
+		margin-top: 10px;
+
+		position: absolute;
+		right: 0;
+		
+		@media (max-width: $breakpointMobile) {
+			display: none;
+		}
+	}
+	
 	&__three-bars {
 		width: 40px;
 		height: @width;
