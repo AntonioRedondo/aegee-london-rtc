@@ -129,5 +129,25 @@ function init() { // eslint-disable-line no-unused-vars
 	});
 	
 	
+	// Adapts the UI to remove intro animations if the URL points to a section
+	var hash = window.location.hash;
+	if ((hash && hash !== "#intro") || isMobile()) {
+		d.gc("top-bar").classList.add("top-bar--in");
+		d.st(function() { d.gc("top-bar").classList.remove("top-bar--in-no-delay"); }, 1000);
+		showTopBarEntries();
+	}
+	
+	
+	// Set ups the navigation top bar for mobile screens
+	d.qsa(".top-bar__tab, .top-bar__three-bars, .top-bar__three-bars-close-surface").forEach(function(item) {
+		item.addEventListener("click", function() {
+			if (isMobile()) {
+				d.gc("top-bar").classList.toggle("top-bar--open");
+				d.gc("top-bar__three-bars-close-surface").classList.toggle("top-bar__three-bars-close-surface--in");
+			}
+		});
+	});
+	
+	
 	d.gc("body").classList.add("body--in");
 }

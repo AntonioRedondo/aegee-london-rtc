@@ -37,6 +37,12 @@ a {
 	}
 }
 
+ul {
+	@media (max-width: $breakpointMobile) {
+		padding-inline-start: 4vw;
+	}
+}
+
 
 
 
@@ -82,9 +88,9 @@ a {
 .title2 {
 	margin: 2vw 0;
 	
-	font-family: roboto slab, serif;
-	font-size: 2.5vw;
+	// font-family: roboto slab, serif;
 	font-weight: bold;
+	font-size: 2.5vw;
 	line-height: 3vw;
 	
 	@media (max-width: $breakpointMobile) {
@@ -105,7 +111,7 @@ a {
 	line-height: 1.2vw;
 	
 	@media (max-width: $breakpointMobile) {
-		font-size: 7vw;
+		font-size: 9vw;
 		line-height: 9vw;
 	}
 	
@@ -231,7 +237,7 @@ a {
 		
 		& .intro__bg-flag {
 			opacity: 1;
-			transform: scale(1.3);
+			transform: scale(1);
 		}
 	}
 }

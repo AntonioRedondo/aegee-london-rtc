@@ -4,7 +4,7 @@ d.notifyWhenLoaded(".intro__subtext");
 
 WebFont.load({
 	google: {
-		families: ["Roboto Slab:800", "Source Sans Pro:300,900"]
+		families: ["Roboto Slab:700", "Source Sans Pro:300,900"]
 	},
 	typekit: {
 		id: "bebas-neue",
@@ -16,6 +16,10 @@ WebFont.load({
 	inactive: function() {
 		window.location.reload();
 	},
+	// fontinactive: function(familyName, fvd) {
+	// 	console.log(familyName);
+	// 	console.log(fvd);
+	// },
 	classes: false,
-	timeout: 4000
+	timeout: 5000
 });

@@ -9,8 +9,8 @@
 		flex-flow: wrap;
 		
 		@media (max-width: $breakpointMobile) {
-			width: 90%;
-			margin: 5% 0 0 10%;
+			width: 85%;
+			margin: 5% 5% 0 10%;
 		}
 	}
 	
@@ -45,7 +45,7 @@
 		text-align: right;
 		
 		@media (max-width: $breakpointMobile) {
-			width: 10%;
+			width: 13%;
 			padding-right: 3%;
 		}
 	}

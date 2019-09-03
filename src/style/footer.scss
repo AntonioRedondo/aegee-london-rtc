@@ -86,4 +86,12 @@
 			/* stylelint-enable */
 		}
 	}
+	
+	&__new-line {
+		display: none;
+		
+		@media (max-width: $breakpointMobile) {
+			display: inline;
+		}
+	}
 }

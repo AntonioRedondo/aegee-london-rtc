@@ -23,6 +23,10 @@
 	&--in {
 		box-shadow: 0 0 15px color-mod(black a(35%));
 		background: $color3;
+	
+		@media (max-width: $breakpointMobile) {
+			background: palegoldenrod;
+		}
 		
 		& .top-bar__tab {
 			text-shadow: none;
@@ -38,7 +42,8 @@
 	}
 	
 	&--open {
-		height: 490px;
+		height: calc($topBarHeightMobile * 5);
+		background: $color3;
 		transition-timing-function: $ease-out;
 	}
 	

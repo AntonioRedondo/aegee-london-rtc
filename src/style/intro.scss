@@ -22,17 +22,22 @@
 	
 	&__bg-flag {
 		width: 100%;
-		height: 100%;
+		height: 127%;
 		
 		position: absolute;
-		top: 0;
+		top: -10%;
 		left: 0;
 		
 		opacity: 0;
-		background: url('img/bgb.png') center;
-		background-size: 84%;
+		background: url('img/bgb.png') center / cover;
 		
 		transition: $time3 ease-out;
+		transform: scale(1.3);
+		
+		@media (max-width: $breakpointMobile) {
+			height: 140%;
+			background: url('img/bgbportrait.png') center / cover;
+		}
 	}
 	
 	&__logo-container {
@@ -51,7 +56,7 @@
 			opacity 2s 0.5s ease-in;
 		
 		@media (max-width: $breakpointMobile) {
-			top: 24vh;
+			top: 26vh;
 		}
 	}
 	
@@ -62,7 +67,7 @@
 		display: block;
 		
 		@media (max-width: $breakpointMobile) {
-			width: 75vw;
+			width: 70vw;
 		}
 	}
 	
