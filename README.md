@@ -6,7 +6,7 @@
 
 AEGEE strives for a democratic, diverse and borderless Europe, which is socially, economically and politically integrated, and values the participation of young people in its construction and development. AEGEE is a secular, non-profit organization, not linked to any political party. All projects and activities are based on voluntarily work of its members. AEGEE empowers students and young people in Europe to take an active role in society by influencing political decision makers, and it creates a space for dialogue and learning opportunities.
 
-In order to speed up the development of the website  [aegee-london.eu](http://aegee-london.eu) ([source code](https://github.com/AntonioRedondo/antonioredondo.com)) was used as starting point.
+In order to speed up the development of the website  [aegee-london.eu](http://aegee-london.eu) ([source code](https://github.com/AntonioRedondo/aegee-london.eu)) was used as starting point.
 
 Check the website online on http://aegee-london.eu/rtc
 
