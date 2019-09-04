@@ -249,3 +249,70 @@ ul {
 		}
 	}
 }
+
+
+
+
+
+.link {
+	position: relative;
+	
+	&:hover &__icon {
+		opacity: 1;
+	}
+	
+	&:target {
+		animation: 8s question;
+		
+		/* stylelint-disable */
+		@at-root { @keyframes question {
+					0% { color: white; text-shadow: 0 0 20px white; }
+					20% { color: white; text-shadow: 0 0 20px white; }
+				} }
+		/* stylelint-enable */
+	}
+	
+	&__icon {
+		width: 4vw;
+		height: @width;
+		
+		display: block;
+		
+		position: absolute;
+		top: calc(50% - 2vw);
+		left: -@width;
+		
+		background: inline("img/permalink.svg") no-repeat center;
+		background-size: 2vw;
+		
+		cursor: pointer;
+		
+		transition: $time1;
+		
+		opacity: 0;
+		
+		@media (max-width: $breakpointMobile) {
+			width: 7vw;
+			height: @width;
+			
+			top: 1vw;
+			left: -7vw;
+			
+			background-size: 4vw;
+		}
+		
+		@media (min-width: $breakpointBig) {
+			width: 80px;
+			height: @width;
+			
+			top: calc(50% - 40px);
+			left: -80px;
+			
+			background-size: 40px;
+		}
+		
+		&:hover {
+			filter: drop-shadow(0 0 1vw white);
+		}
+	}
+}

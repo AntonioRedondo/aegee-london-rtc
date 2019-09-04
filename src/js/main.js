@@ -75,25 +75,29 @@ function init() { // eslint-disable-line no-unused-vars
 		easing: "outCubic",
 		duration: 800,
 		handleLink: function(link) {
-			var extra = 1;
+			var extraSpace = -100;
 			var linkText = link.href.split("#").pop();
-			
-			try { // To prevent SYNTAX_ERR exception
-				if (d.qs("#" + linkText) === null)
-					throw Error;
-			} catch(e) {
-				document.location.hash = "";
-				return 0;
-			}
+			var linkPositionIntroduction = d.calcRelativePosition("#introduction", "#" + linkText);
+			var linkPositionLocations = d.calcRelativePosition("#locations", "#" + linkText);
+			var linkPositionGetReady = d.calcRelativePosition("#get-ready", "#" + linkText);
 			
 			switch (linkText) {
-				case "introduction":	return offsetFunctions.d0 + extra;
-				case "programme":		return offsetFunctions.d1 + extra;
-				case "locations":		return offsetFunctions.d2 + extra;
-				case "get-ready":		return offsetFunctions.d3 + extra;
-				case "organisers":		return offsetFunctions.d4 + extra;
+				case "intro":														return 0;
+				case "introduction":												return offsetFunctions.d0g;
+				case "what-is-aegee":												return offsetFunctions.d0g + linkPositionIntroduction.top + extraSpace;
+				case "programme":													return offsetFunctions.d1g;
+				case "locations":													return offsetFunctions.d2g;
+				case "hostel":
+				case "sky-garden":
+				case "rest-of-london":												return offsetFunctions.d2g + linkPositionLocations.top + extraSpace;
+				case "get-ready":													return offsetFunctions.d3g;
+				case "what-to-bring":
+				case "what-the-fee-includes":
+				case "useful-information":											return offsetFunctions.d3g + linkPositionGetReady.top + extraSpace;
+				case "organisers":													return offsetFunctions.d4g;
 			}
 			
+			window.history.replaceState(null, null, " "); // https://stackoverflow.com/questions/1397329/how-to-remove-the-hash-from-window-location-url-with-javascript-without-page-r
 			return 0;
 		}
 	});
