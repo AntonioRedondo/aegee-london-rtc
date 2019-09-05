@@ -143,7 +143,7 @@
 		}
 		
 		&:hover {
-			text-shadow: 0 0 2em $color6;
+			text-shadow: 0 0 2em white;
 		}
 		
 		&--m {
@@ -251,7 +251,7 @@
 	&__three-bars {
 		width: 40px;
 		height: @width;
-		margin: 18px;
+		margin: 15px;
 		
 		z-index: 15;
 		position: fixed;
