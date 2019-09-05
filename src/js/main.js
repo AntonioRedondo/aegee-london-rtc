@@ -93,6 +93,7 @@ function init() { // eslint-disable-line no-unused-vars
 				case "get-ready":													return offsetFunctions.d3g;
 				case "what-to-bring":
 				case "what-the-fee-includes":
+				case "how-to-reach-london-centre":
 				case "useful-information":											return offsetFunctions.d3g + linkPositionGetReady.top + extraSpace;
 				case "organisers":													return offsetFunctions.d4g;
 			}
