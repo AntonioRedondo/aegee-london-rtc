@@ -1,49 +1,73 @@
 .locations {
 	z-index: 7;
 	
-	&__fb-iframe {
-		width: 500px;
-		height: 745px;
-		margin: 0 auto;
-		
-		display: block;
-		
-		border: none;
+	&__hostel-container {
+		height: 25vw;
+		margin-top: 4vw;
+
+		overflow: hidden;
+		position: relative;
+		display: flex;
 		
 		@media (max-width: $breakpointMobile) {
-			width: 90%;
-			height: 800px;
-			margin: 8vw auto;
+			height: 85vh;
+			margin: 12vw 0 0;
+			flex-flow: column;
+		}
+	}
+	
+	&__hostel {
+		width: 35%;
+		height: 25vw;
+
+		object-fit: cover;
+		
+		@media (max-width: $breakpointMobile) {
+			width: 100%;
+			height: 35vh;
+		}
+	}
+	
+	&__map-container {
+		width: 65%;
+		height: 25vw;
+		
+		position: relative;
+		overflow: hidden;
+		
+		@media (max-width: $breakpointMobile) {
+			width: 100%;
+			height: 50vh;
 		}
 	}
 	
 	&__map-overlay {
 		width: 100%;
-		height: 35vw;
-		margin-top: -35vw;
+		height: 25vw;
 		
-		position: relative;
-		top: 40vw;
+		position: absolute;
+		top: 0;
+		right: 0;
+		
+		@media (max-width: $breakpointMobile) {
+			height: 50vh;
+		}
 	}
 	
 	&__map {
 		width: 100%;
 		height: 25vw;
-		margin: 4vw 0 0;
 		
 		display: block;
+		
+		position: absolute;
+		top: 0;
+		right: 0;
 		
 		border: none;
 		
 		@media (max-width: $breakpointMobile) {
-			height: 100vw;
-			margin: 12vw 0 0;
-		}
-		
-		@media (min-width: $breakpointBig) {
-			width: $breakpointBig;
-			height: 700px;
-			margin: 100px 0 0;
+			height: 50vh;
 		}
 	}
 }
