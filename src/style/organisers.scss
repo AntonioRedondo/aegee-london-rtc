@@ -72,25 +72,17 @@
 		}
 	}
 	
-	&__loves-you-a {
+	&__loves-you {
 		width: 35vw;
 		margin: 6vw auto 7vw;
 		display: block;
 		border: none;
-		
-		@media (max-width: $breakpointMobile) {
-			width: 80vw;
-			margin: 15vw auto 18vw;
-		}
-	}
-	
-	&__loves-you {
-		width: 35vw;
 
 		transition: $time1 ease-out;
 		
 		@media (max-width: $breakpointMobile) {
 			width: 80vw;
+			margin: 15vw auto 18vw;
 		}
 
 		&:hover {
