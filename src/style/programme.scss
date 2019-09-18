@@ -1,5 +1,16 @@
 .programme {
 	z-index: 8;
+
+	&__image {
+		width: 40vw;
+		margin: 4vw auto 2vw;
+		display: block;
+		
+		@media (max-width: $breakpointMobile) {
+			width: 85vw;
+			margin: 12vw auto 2vw;
+		}
+	}
 	
 	&__program-container {
 		width: 70%;
