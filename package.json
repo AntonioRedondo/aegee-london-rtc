@@ -23,11 +23,11 @@
 	"//": "Grouped by concern: basics, lint, build, production, server",
 	"devDependencies": {
 		"del": "2.2",
-		"gulp": "3.9",
+		"gulp": "4.0",
 		"gulp-newer": "1.3",
 		"gulp-sourcemaps": "2.6",
 		"gulp-eslint": "3.0",
-		"gulp-htmlhint": "0.3",
+		"gulp-htmlhint": "4.0",
 		"gulp-stylelint": "5.0",
 		"stylelint-config-standard": "17.0",
 		"husky": "0.13",
