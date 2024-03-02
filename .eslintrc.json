@@ -5,11 +5,12 @@
 	"plugins": [
 	],
 	"parserOptions": {
-		"ecmaVersion": 5,
+		"ecmaVersion": 2020,
 		"sourceType": "module"
 	},
 	"env": {
 		"browser": true,
+		"es6": true,
 		"node": true
 	},
 	"globals": {
@@ -17,9 +18,7 @@
 		"ga": true,
 		"d": true,
 		"skrollr": true,
-		"YT": true,
-		"WebFont": true,
-		"Promise": true
+		"YT": true
 	},
 	"rules": {
 		"comma-dangle": [2, "only-multiline"],

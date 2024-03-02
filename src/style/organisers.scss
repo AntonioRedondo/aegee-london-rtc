@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 .organisers {
 	z-index: 5;
 	
@@ -23,7 +24,7 @@
 		
 		&:hover .organisers__img {
 			transform: scale(1.1);
-			// box-shadow: 0 0 10vw 0 color-mod($color6 a(50%));
+			/* box-shadow: 0 0 10vw 0 color-mod($color6 a(50%)); */
 			box-shadow: 0 0 5vw 0 $color6;
 		}
 	}
@@ -56,7 +57,7 @@
 	
 	&__name {
 		color: palegoldenrod;
-		font-family: roboto slab, serif;
+		font-family: "Roboto Slab", serif;
 		font-size: 2.5vw;
 		
 		@media (max-width: $breakpointMobile) {

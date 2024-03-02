@@ -1,5 +1,8 @@
 {
-	"extends": "stylelint-config-standard",
+	"extends": "stylelint-config-standard-scss",
+	"syntax": "scss",
+	"reporters": [{ "formatter": "string", "console": true }],
+	"failAfterError": false,
 	"//": "http://stylelint.io/user-guide/rules",
 	"//": "http://stackoverflow.com/questions/38462937/cannot-set-block-no-empty-to-false-in-stylelint",
 	"rules": {
@@ -11,12 +14,9 @@
 		}],
 		"comment-empty-line-before": null,
 		"declaration-empty-line-before": null,
-		"indentation": "tab",
-		"max-empty-lines": 5,
-		"no-eol-whitespace": [true, {
-			"ignore": [ "empty-lines" ]
-		}],
+		"no-descending-specificity": null,
 		"rule-empty-line-before": null,
-		"selector-list-comma-newline-after": "always-multi-line"
+		"scss/dollar-variable-empty-line-before": null,
+		"scss/dollar-variable-pattern": null
 	}
 }

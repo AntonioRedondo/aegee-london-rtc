@@ -1,7 +1,4 @@
-@import "variables";
-
-
-
+/* stylelint-disable selector-class-pattern */
 * {
 	box-sizing: border-box;
 	
@@ -15,7 +12,7 @@ html {
 	background-color: black;
 	
 	color: white;
-	font-family: Source Sans Pro, sans-serif;
+	font-family: "Source Sans Pro", sans-serif;
 }
 
 body {
@@ -74,9 +71,8 @@ ul {
 .title1 {
 	margin: 2vw 0 3vw;
 	
-	font-family: bebas-neue, sans-serif;
-	font-family: roboto slab, serif;
-	// letter-spacing: 0.6rem;
+	font-family: "Roboto Slab", serif;
+	/* letter-spacing: 0.6rem; */
 	font-size: 4vw;
 	line-height: 0.9em;
 	color: paleturquoise;
@@ -96,7 +92,7 @@ ul {
 .title2 {
 	margin: 2vw 0;
 	
-	// font-family: roboto slab, serif;
+	/* font-family: "Roboto Slab", serif; */
 	font-weight: bold;
 	font-size: 2.5vw;
 	line-height: 3vw;
@@ -178,7 +174,7 @@ ul {
 		transform: none !important;
 	}
 	
-	@media (min-resolution: 180dpi) {
+	@media (min-resolution >= 180dpi) {
 		filter: none !important;
 	}
 }
