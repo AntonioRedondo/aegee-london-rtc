@@ -14,6 +14,6 @@ Check the website online on http://aegee-london.eu/rtc
 <img src="https://github.com/AntonioRedondo/aegee-london-rtc/raw/master/readmeImages/2.png" width="900px" />
 <img src="https://github.com/AntonioRedondo/aegee-london-rtc/raw/master/readmeImages/3.png" width="900px" />
 
-.<img src="https://github.com/AntonioRedondo/aegee-london-rtc/raw/master/readmeImages/m1.png" width="280px" />
-<img src="https://github.com/AntonioRedondo/aegee-london-rtc/raw/master/readmeImages/m2.png" width="280px" />
-<img src="https://github.com/AntonioRedondo/aegee-london-rtc/raw/master/readmeImages/m3.png" width="280px" />
+.<img src="https://github.com/AntonioRedondo/aegee-london-rtc/raw/master/readmeImages/m1.png" width="270px" />
+<img src="https://github.com/AntonioRedondo/aegee-london-rtc/raw/master/readmeImages/m2.png" width="270px" />
+<img src="https://github.com/AntonioRedondo/aegee-london-rtc/raw/master/readmeImages/m3.png" width="270px" />

@@ -1,3 +1,6 @@
+.C\(\#fbba00\) {
+  color: #fbba00;
+}
 .C\(palegoldenrod\) {
   color: palegoldenrod;
 }
@@ -6,6 +9,9 @@
 }
 .D\(if\) {
   display: inline-flex;
+}
+.Fz\(3\.6vw\) {
+  font-size: 3.6vw;
 }
 .H\(100\%\) {
   height: 100%;
@@ -46,9 +52,6 @@
 }
 .Mt\(2vw\) {
   margin-top: 2vw;
-}
-.Mt\(3vw\) {
-  margin-top: 3vw;
 }
 .Mt\(4vw\) {
   margin-top: 4vw;
@@ -101,6 +104,9 @@
   }
 }
 @media (max-width: 810px) {
+  .Fz\(5\.2vw\)--mo {
+    font-size: 5.2vw;
+  }
   .H\(a\)--mo {
     height: auto;
   }
